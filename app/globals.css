@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 25% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 260 25% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 260 25% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 270 75% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 290 70% 70%;
+    --secondary-foreground: 260 25% 11%;
+
+    --muted: 260 25% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 290 70% 70%;
+    --accent-foreground: 260 25% 11%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 25% 25%;
+    --input: 260 25% 25%;
+    --ring: 270 75% 60%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.hydra-gradient {
+  background: linear-gradient(90deg, rgba(192, 132, 252, 0.2) 0%, rgba(232, 121, 249, 0.2) 100%);
+}
+
+.hydra-card {
+  background: rgba(39, 35, 67, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(123, 97, 255, 0.2);
+}
+
+.hydra-glow {
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.3);
+}
+
+.hydra-button {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 1) 0%, rgba(196, 69, 252, 1) 100%);
+  transition: all 0.3s ease;
+}
+
+.hydra-button:hover {
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.5);
+  transform: translateY(-2px);
+}
+
+.hydra-border {
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.hydra-text-gradient {
+  background: linear-gradient(90deg, rgba(192, 132, 252, 1) 0%, rgba(232, 121, 249, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hydra-circle-decoration {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.2) 0%, rgba(196, 69, 252, 0.2) 100%);
+  z-index: -1;
+}
